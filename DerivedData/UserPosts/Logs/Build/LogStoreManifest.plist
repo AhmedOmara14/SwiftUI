@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>7A4A0E5F-9DCB-426D-A663-2A70637F467B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7A4A0E5F-9DCB-426D-A663-2A70637F467B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>1</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>UserPosts project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>UserPosts</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build UserPosts</string>
+			<key>timeStartedRecording</key>
+			<real>790623701.02772999</real>
+			<key>timeStoppedRecording</key>
+			<real>790623701.55835295</real>
+			<key>title</key>
+			<string>Build UserPosts</string>
+			<key>uniqueIdentifier</key>
+			<string>7A4A0E5F-9DCB-426D-A663-2A70637F467B</string>
+		</dict>
+		<key>DDB1B7BB-DC47-4857-A82C-31E9080B3E06</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DDB1B7BB-DC47-4857-A82C-31E9080B3E06.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>1</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>UserPosts project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>UserPosts</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build UserPosts</string>
+			<key>timeStartedRecording</key>
+			<real>790623215.02284896</real>
+			<key>timeStoppedRecording</key>
+			<real>790623218.69930696</real>
+			<key>title</key>
+			<string>Build UserPosts</string>
+			<key>uniqueIdentifier</key>
+			<string>DDB1B7BB-DC47-4857-A82C-31E9080B3E06</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

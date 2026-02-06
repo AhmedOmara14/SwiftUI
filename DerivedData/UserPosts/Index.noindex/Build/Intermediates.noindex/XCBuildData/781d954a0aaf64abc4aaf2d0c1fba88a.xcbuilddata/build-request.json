@@ -1,0 +1,48 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "19b4f29202b8d896587396ad84b9882de7610876c0ad234d462fdad93f86f6d0"
+    }
+  ],
+  "containerPath" : "/Users/omara/Desktop/Tutorial/UserPosts/UserPosts.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Products",
+      "derivedDataPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/PrecompiledHeaders",
+      "indexRegularBuildIntermediatesPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex",
+      "indexRegularBuildProductsPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Products",
+      "pchPath" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

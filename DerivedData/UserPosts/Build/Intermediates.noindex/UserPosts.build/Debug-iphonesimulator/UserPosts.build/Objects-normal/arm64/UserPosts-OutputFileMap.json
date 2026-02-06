@@ -1,0 +1,38 @@
+{
+  "" : {
+    "diagnostics" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPosts-master.dia",
+    "emit-module-dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPosts-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPosts-master-emit-module.dia",
+    "swift-dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPosts-master.swiftdeps"
+  },
+  "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/omara/Desktop/Tutorial/UserPosts/UserPosts/ContentView.swift" : {
+    "const-values" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/omara/Desktop/Tutorial/UserPosts/UserPosts/UserPostsApp.swift" : {
+    "const-values" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp.swiftconstvalues",
+    "dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp.d",
+    "diagnostics" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp.dia",
+    "index-unit-output-path" : "/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp.o",
+    "llvm-bc" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp.bc",
+    "object" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp.o",
+    "swift-dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp.swiftdeps",
+    "swiftmodule" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Build/Intermediates.noindex/UserPosts.build/Debug-iphonesimulator/UserPosts.build/Objects-normal/arm64/UserPostsApp~partial.swiftmodule"
+  }
+}

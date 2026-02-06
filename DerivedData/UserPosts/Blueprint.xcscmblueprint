@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BA16C1827C3603B414F9484AEDE9AE6141605993",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BA16C1827C3603B414F9484AEDE9AE6141605993" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "53BDC053-99F9-4D3F-B32D-76450985F23E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BA16C1827C3603B414F9484AEDE9AE6141605993" : "UserPosts\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "UserPosts",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "UserPosts.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AhmedOmara14\/UserPosts.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BA16C1827C3603B414F9484AEDE9AE6141605993"
+    }
+  ]
+}

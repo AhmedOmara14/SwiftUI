@@ -1,0 +1,3 @@
+Target dependency graph (2 targets)
+Target 'UserPosts' in project 'UserPosts' (no dependencies)
+Target 'UserPosts' in project 'UserPosts' (no dependencies)

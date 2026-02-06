@@ -1,0 +1,18 @@
+{
+  "" : {
+    "dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex/UserPosts.build/Debug-iphoneos/UserPosts.build/Objects-normal/arm64/UserPosts-master.d",
+    "diagnostics" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex/UserPosts.build/Debug-iphoneos/UserPosts.build/Objects-normal/arm64/UserPosts-master.dia",
+    "emit-module-dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex/UserPosts.build/Debug-iphoneos/UserPosts.build/Objects-normal/arm64/UserPosts-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex/UserPosts.build/Debug-iphoneos/UserPosts.build/Objects-normal/arm64/UserPosts-master-emit-module.dia",
+    "swift-dependencies" : "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex/UserPosts.build/Debug-iphoneos/UserPosts.build/Objects-normal/arm64/UserPosts-master.swiftdeps"
+  },
+  "/Users/omara/Desktop/Tutorial/UserPosts/DerivedData/UserPosts/Index.noindex/Build/Intermediates.noindex/UserPosts.build/Debug-iphoneos/UserPosts.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+
+  },
+  "/Users/omara/Desktop/Tutorial/UserPosts/UserPosts/ContentView.swift" : {
+
+  },
+  "/Users/omara/Desktop/Tutorial/UserPosts/UserPosts/UserPostsApp.swift" : {
+
+  }
+}
