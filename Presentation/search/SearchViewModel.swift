@@ -8,11 +8,17 @@ final class SearchViewModel: ObservableObject {
     private let searchUseCase: SearchMoviesUseCase
     private var searchTask: Task<Void, Never>?
     
-    init(searchUseCase: SearchMoviesUseCase) {
+    private let router: AppRouter
+
+    init(searchUseCase: SearchMoviesUseCase, appRouter: AppRouter) {
         self.searchUseCase = searchUseCase
+        self.router = appRouter
         onQueryChanged("Avatar")
     }
     
+    func navigateToDetails(movie: Movie) {
+        router.navigate(to: .DetailsScreen(id: movie.id))
+    }
 
     
     func onQueryChanged(_ query: String) {

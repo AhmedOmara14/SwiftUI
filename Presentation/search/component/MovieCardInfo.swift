@@ -3,9 +3,11 @@ import SwiftUI
 
 struct MovieCardInfo: View {
     let movie: Movie
+    let onTapMovie: (Movie) -> Void
     
-    init(movie: Movie) {
+    init(movie: Movie, onTapMovie: @escaping (Movie) -> Void = { _ in }) {
         self.movie = movie
+        self.onTapMovie = onTapMovie
     }
     
     var body: some View {
@@ -61,5 +63,6 @@ struct MovieCardInfo: View {
         .background(Color.white)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 2)
+        .onTapGesture { onTapMovie(movie) }
     }
 }
