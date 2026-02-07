@@ -1,9 +1,11 @@
 import SwiftUI
 
 @MainActor
-final class SearchViewModel: ObservableObject {
+final class HomeViewModel: ObservableObject {
     @Published var query:String = ""
     @Published private(set) var state: ViewState<[Movie]> = .idle
+    
+    @Published private(set) var forYouState: ViewState<[Movie]> = .idle
     
     private let searchUseCase: SearchMoviesUseCase
     private var searchTask: Task<Void, Never>?
@@ -13,7 +15,11 @@ final class SearchViewModel: ObservableObject {
     init(searchUseCase: SearchMoviesUseCase, appRouter: AppRouter) {
         self.searchUseCase = searchUseCase
         self.router = appRouter
-        onQueryChanged("Avatar")
+        onQueryChanged("Will Smith")
+        
+        Task {
+            await self.fetchForYouContent()
+        }
     }
     
     func navigateToDetails(movie: Movie) {
@@ -53,4 +59,18 @@ final class SearchViewModel: ObservableObject {
             state = .failure(error.localizedDescription)
         }
     }
+    
+    
+    func fetchForYouContent() async {
+        guard Task.isCancelled == false else { return }
+        forYouState = .loading
+        
+        do {
+            let movies = try await searchUseCase.execute(query: "Will", page: 1)
+            forYouState = .loaded(movies)
+        } catch {
+            forYouState = .failure(error.localizedDescription)
+        }
+    }
+
 }
