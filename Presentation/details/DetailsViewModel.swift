@@ -7,12 +7,12 @@ final class HomeViewModel: ObservableObject {
     
     @Published private(set) var forYouState: ViewState<[Movie]> = .idle
     
-    private let searchUseCase: SearchMoviesUseCase
+    private let searchUseCase: GetAllMoviesUseCase
     private var searchTask: Task<Void, Never>?
     
     private let router: AppRouter
 
-    init(searchUseCase: SearchMoviesUseCase, appRouter: AppRouter) {
+    init(searchUseCase: GetAllMoviesUseCase, appRouter: AppRouter) {
         self.searchUseCase = searchUseCase
         self.router = appRouter
         onQueryChanged("Will Smith")
@@ -35,7 +35,6 @@ final class HomeViewModel: ObservableObject {
         
         let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmedQuery.isEmpty else {
-            print("[SearchViewModel] Empty query -> resetting to idle")
             self.state = .idle
             return
         }

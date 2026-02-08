@@ -1,4 +1,7 @@
-private struct Pill: View {
+
+import SwiftUI
+
+struct Pill: View {
     let text: String
     var icon: String? = nil
     var isRating: Bool = false

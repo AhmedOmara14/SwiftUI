@@ -1,4 +1,6 @@
 
+import SwiftUI
+
 struct AnimatedMovieSlider: View {
     let movies: [Movie]
     @Binding var currentIndex: Int
@@ -9,7 +11,7 @@ struct AnimatedMovieSlider: View {
 
     var body: some View {
         GeometryReader { geo in
-            let cardWidth = geo.size.width * 0.64
+            let cardWidth = geo.size.width * 0.70
             let cardHeight = min(460, geo.size.height) * 0.92
             let sidePadding = (geo.size.width - cardWidth) / 2
 
@@ -31,37 +33,7 @@ struct AnimatedMovieSlider: View {
                                 Button {
                                     onTap(movie)
                                 } label: {
-                                    ZStack(alignment: .bottom) {
-                                        AsyncImage(url: posterURL(movie)) { phase in
-                                            switch phase {
-                                            case .empty:
-                                                ProgressView()
-                                                    .frame(width: cardWidth, height: cardHeight)
-                                            case .success(let image):
-                                                image
-                                                    .resizable()
-                                                    .scaledToFill()
-                                                    .frame(width: cardWidth, height: cardHeight)
-                                                    .clipped()
-                                            case .failure:
-                                                Image(systemName: "photo")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 60, height: 60)
-                                                    .foregroundStyle(.white.opacity(0.5))
-                                                    .frame(width: cardWidth, height: cardHeight)
-                                            @unknown default:
-                                                EmptyView()
-                                            }
-                                        }
-
-                                        LinearGradient(
-                                            colors: [.clear, .black.opacity(0.75)],
-                                            startPoint: .top,
-                                            endPoint: .bottom
-                                        )
-                                        .frame(height: cardHeight * 0.45)
-                                    }
+                                    MovieCard(movie: movie,cardWidth: cardWidth,cardHeight: cardHeight)
                                     .frame(width: cardWidth, height: cardHeight)
                                     .clipShape(RoundedRectangle(cornerRadius: cardCorner, style: .continuous))
                                     .shadow(color: .black.opacity(0.35), radius: 18, x: 0, y: 18)
@@ -97,8 +69,18 @@ struct AnimatedMovieSlider: View {
         .frame(height: 430)
     }
 
-    private func posterURL(_ movie: Movie) -> URL? {
-        guard let path = movie.posterPath, !path.isEmpty else { return nil }
-        return URL(string: "https://image.tmdb.org/t/p/w500\(path)")
+    
+}
+
+
+private extension Array {
+    subscript(safe index: Int) -> Element? {
+        guard indices.contains(index) else { return nil }
+        return self[index]
     }
+}
+
+func posterURL(_ movie: Movie) -> URL? {
+    guard let path = movie.posterPath, !path.isEmpty else { return nil }
+    return URL(string: "https://image.tmdb.org/t/p/w500\(path)")
 }
