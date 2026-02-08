@@ -1,9 +1,9 @@
 
-protocol SearchMoviesUseCase{
+protocol GetAllMoviesUseCase{
     func execute(query:String, page:Int) async throws -> [Movie]
 }
 
-final class DefaultSearchMoviesUseCase:SearchMoviesUseCase{
+final class DefaultGetAllMoviesUseCase:GetAllMoviesUseCase{
     let repository:MovieRepository
     
     init(repository: MovieRepository) {

@@ -1,10 +1,3 @@
-//
-//  UserPostsApp.swift
-//  UserPosts
-//
-//  Created by Omara on 10/01/2026.
-//
-
 import SwiftUI
 
 @main
@@ -16,7 +9,7 @@ struct UserPostsApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.path) {
-                makeSearchView()
+                makeOnBoaringView()
                     .navigationDestination(for: Route.self) { route in
                         makeView(for: route)
                     }
@@ -24,26 +17,38 @@ struct UserPostsApp: App {
             .environmentObject(router)
         }
     }
-        
-    private func makeSearchView() -> SearchView {
+
+    private func makeHomeView() -> HomeView {
         let dataSource = MovieRemoteDataSourceImpl(token: movieToken)
         let repository: MovieRepository = MovieRepositoryImpl(remoteDataSource: dataSource)
-        let useCase = DefaultSearchMoviesUseCase(repository: repository)
-        let viewModel = SearchViewModel(searchUseCase: useCase, appRouter: router)
-        return SearchView(viewModel: viewModel)
+        let useCase = DefaultGetAllMoviesUseCase(repository: repository)
+        let viewModel = HomeViewModel(searchUseCase: useCase, appRouter: router)
+        return HomeView(viewModel: viewModel)
     }
-    
-    
+
     private func makeDetailsView(id: Int) -> DetailsScreen {
-        return DetailsScreen(moviewID: id)
+        let dataSource = MovieRemoteDataSourceImpl(token: movieToken)
+        let repository: MovieRepository = MovieRepositoryImpl(remoteDataSource: dataSource)
+        let useCase = DefaultGetMovieDetailsUseCase(repository: repository)
+        let viewModel = DetailsViewModel(movieDetialsUseCase: useCase, appRouter: router)
+        return DetailsScreen(moviewID: id,viewModel: viewModel)
+      }
+
+    private func makeOnBoaringView() -> OnBoaringScreen {
+        OnBoaringScreen {
+            router.navigate(to: .HomeScreen)
+        }
     }
-    
+
     @ViewBuilder
     private func makeView(for route: Route) -> some View {
         switch route {
+        case .OnBoardingScreen:
+            makeOnBoaringView()
+
         case .HomeScreen:
-            makeSearchView()
-            
+            makeHomeView()
+
         case .DetailsScreen(let id):
             makeDetailsView(id: id)
         }

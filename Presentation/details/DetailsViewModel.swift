@@ -1,74 +1,32 @@
 import SwiftUI
 
 @MainActor
-final class HomeViewModel: ObservableObject {
-    @Published var query:String = ""
-    @Published private(set) var state: ViewState<[Movie]> = .idle
+final class DetailsViewModel: ObservableObject {
+    @Published private(set) var state: ViewState<MovieDetails> = .idle
     
-    @Published private(set) var forYouState: ViewState<[Movie]> = .idle
-    
-    private let searchUseCase: GetAllMoviesUseCase
-    private var searchTask: Task<Void, Never>?
+
+    private let movieDetialsUseCase: GetMovieDetailsUseCase
     
     private let router: AppRouter
 
-    init(searchUseCase: GetAllMoviesUseCase, appRouter: AppRouter) {
-        self.searchUseCase = searchUseCase
+    init(movieDetialsUseCase: GetMovieDetailsUseCase, appRouter: AppRouter) {
+        self.movieDetialsUseCase = movieDetialsUseCase
         self.router = appRouter
-        onQueryChanged("Will Smith")
-        
-        Task {
-            await self.fetchForYouContent()
-        }
     }
     
-    func navigateToDetails(movie: Movie) {
-        router.navigate(to: .DetailsScreen(id: movie.id))
+    func onBackPressure() {
+        router.navigateBack()
     }
 
-    
-    func onQueryChanged(_ query: String) {
-        self.query = query
-        print("[SearchViewModel] onQueryChanged -> query='\(query)' ")
-        
-        searchTask?.cancel()
-        
-        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmedQuery.isEmpty else {
-            self.state = .idle
-            return
-        }
-        
-        searchTask = Task { [weak self] in
-            try? await Task.sleep(nanoseconds: 400_000_000)
-            guard let self else { return }
-            guard !Task.isCancelled else { return }
-            await self.search(page: 1)
-        }
-    }
-    
-    func search(page: Int) async {
-        guard Task.isCancelled == false else { return }
+  
+    func fetchMovieDetials(movieId:String) async {
         state = .loading
         
         do {
-            let movies = try await searchUseCase.execute(query: query, page: page)
-            state = .loaded(movies)
+            let movie = try await movieDetialsUseCase.execute(movieId: movieId)
+            state = .loaded(movie)
         } catch {
             state = .failure(error.localizedDescription)
-        }
-    }
-    
-    
-    func fetchForYouContent() async {
-        guard Task.isCancelled == false else { return }
-        forYouState = .loading
-        
-        do {
-            let movies = try await searchUseCase.execute(query: "Will", page: 1)
-            forYouState = .loaded(movies)
-        } catch {
-            forYouState = .failure(error.localizedDescription)
         }
     }
 

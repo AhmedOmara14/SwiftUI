@@ -1,5 +1,8 @@
+import SwiftUI
 
 final class MovieRepositoryImpl: MovieRepository {
+  
+    
     private let remoteDataSource: RemoteDataSourceProtocol
     
     init(remoteDataSource: RemoteDataSourceProtocol) {
@@ -12,5 +15,11 @@ final class MovieRepositoryImpl: MovieRepository {
         return dtos.results.map(MovieMapper.map)
     }
     
+    func fetchMovieDetails(movieId: String) async throws -> MovieDetails {
+        let dtos = try await remoteDataSource.fetchMovieDetails(movieId: movieId)
+        
+        
+        return MovieDetailsMapper.map(dtos)
+    }
     
 }

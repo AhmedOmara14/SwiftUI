@@ -48,5 +48,36 @@ final class MovieRemoteDataSourceImpl : RemoteDataSourceProtocol {
         
     }
     
+    func fetchMovieDetails(movieId: String) async throws -> MovieDetailsResponseDTO {
+        var components = URLComponents(string: baseUrl + "/movie/" + movieId)
+       
+        
+        guard let url = components?.url else {
+            throw URLError(.badURL)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "accept")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let (data, response) = try await urlSession.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              200..<300 ~= httpResponse.statusCode else {
+            throw URLError(.badServerResponse)
+        }
+        
+
+        let decoded = try JSONDecoder().decode(
+            MovieDetailsResponseDTO.self,
+            from: data
+        )
+        
+        
+        return decoded
+        
+    }
+    
 }
 

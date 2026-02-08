@@ -1,18 +1,17 @@
 
-protocol GetAllMoviesUseCase{
-    func execute(query:String, page:Int) async throws -> [Movie]
+protocol GetMovieDetailsUseCase{
+    func execute(movieId:String) async throws -> MovieDetails
 }
 
-final class DefaultGetAllMoviesUseCase:GetAllMoviesUseCase{
+final class DefaultGetMovieDetailsUseCase:GetMovieDetailsUseCase{
     let repository:MovieRepository
     
     init(repository: MovieRepository) {
         self.repository = repository
     }
     
-    func execute(query: String, page: Int) async throws -> [Movie] {
-        return try await repository.searchMovies(query: query, page: page)
+    func execute(movieId: String) async throws -> MovieDetails {
+        return try await repository.fetchMovieDetails(movieId: movieId)
     }
      
-    
 }
